@@ -4,7 +4,7 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.filters.command import Command
 
 # АПИ ТОКЕН С БОТА BOT FATHER
-api_token = ''
+api_token = '8194121363:AAFe0q8x5TCabeThoDrB1tDSbAgcmJm5jpQ'
 
 # Создаем объект бота, который связывается с Telegram
 
@@ -16,7 +16,9 @@ dp = Dispatcher()
 
 @dp.message(Command('start'))
 async def start(message: types.Message):
-    await message.answer('/stop')
+    await message.answer('Привет!')
+    # ДЛЯ СТИКЕРОВ
+    await message.answer_sticker('CAACAgIAAxkBAAENE0xnKifsiwH5dxH70cSJyLfKjUNOXgAC2RYAAvwQaUicXPKwXVVIWTYE')
 
 @dp.message()
 async def echo(message: types.Message):
